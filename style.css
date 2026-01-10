@@ -1,79 +1,25 @@
-/***
-*
-*
-*
-*/
-
+/*** 共通設定 ***/
 body {
-    background-color: #1a1a1a;        /* ダークグレーの背景 */
-    color: #e0e0e0;                   /* 落ち着いた白の文字 */
+    background-color: #1a1a1a;
+    color: #e0e0e0;
     font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
-    line-height: 1.6;                 /* 行間を広げて読みやすく */
-    max-width: 800px;                 /* 横幅を絞って視線の移動を減らす */
-    margin: 40px auto;                /* 中央寄せ */
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 40px auto;
     padding: 0 20px;
 }
 
+a { color: #4fc3f7; text-decoration: none; }
+a:hover { text-decoration: underline; }
 
-/*************************************************************/
-/* 記事タイトルのリンク                                      */
-/*************************************************************/
-a {
-    color: #4fc3f7;                   /* 明るい青 */
-    text-decoration: none;            /* 下線を消す */
-}
+h1 { border-bottom: 1px solid #00ff83; padding-bottom: 5px; margin-top: 40px; color: #00ff83; }
+h2 { border-bottom: 1px solid #444; padding-bottom: 5px; margin-top: 40px; color: #ffffff; }
+h2::first-letter, h3::first-letter { color: #00ff83; }
+h3 { color: #00ff83; }
 
-a:hover {
-    text-decoration: underline;       /* カーソルを乗せた時だけ下線 */
-}
+ul { list-style-type: none; padding-left: 0; }
+li { margin-bottom: 10px; }
 
-/*************************************************************/
-/* サイト全体のタイトル                                      */
-/*************************************************************/
-h1 {
-    border-bottom: 1px solid #00ff83; /* 細い区切り線 */
-    padding-bottom: 5px;
-    margin-top: 40px;
-
-    color: #00ff83;                   /* SEN::DAC コーポレートカラー */
-
-}
-
-/*************************************************************/
-/* 各ページのタイトル                                        */
-/*************************************************************/
-h2 {
-    border-bottom: 1px solid #444;   /* 細い区切り線 */
-    padding-bottom: 5px;
-    margin-top: 40px;
-    color: #ffffff;
-}
-
-h2::first-letter {
-  color: #00ff83;                    /* 最初の一文字だけ色を変える */
-}
-
-/*************************************************************/
-/* 見出し                                                    */
-/*************************************************************/
-h3::first-letter {
-  color: #00ff83;                    /* 最初の一文字だけ色を変える */
-}
-h3 {
-  color: #00ff83;                    /* 全て色を変える */
-}
-
-/*************************************************************/
-/* リストの間隔                                              */
-/*************************************************************/
-ul {
-    list-style-type: none;           /* ポートフォリオなら・は無い方がスッキリ */
-    padding-left: 0;
-}
-
-li {
-    margin-bottom: 10px;             /* 記事ごとの隙間 */
-}
 
 /*************************************************************/
 /* コードを書くとき用の設定（もしあれば）                    */
@@ -85,5 +31,30 @@ code, pre {
     font-family: monospace;
 }
 
+/*************************************************************/
+/* コードブロックの文字のズレ対策                            */
+/*************************************************************/
+pre code {
+    /* 1. 綺麗で「等幅」を保証するBIZ UDゴシック。13pxにして「色なし」の頃のサイズ感へ */
+    font-family: "BIZ UDGothic", monospace !important;
+    font-size: 13px !important; 
+    line-height: 1.2 !important;
 
+    /* 2. 余計な装飾・隙間・太らせをすべて排除 */
+    display: block;
+    white-space: pre !important;
+    letter-spacing: 0 !important;
+    font-weight: normal !important; /* 太字になると幅が変わるので強制解除 */
+    
+    /* 3. ズレの元になる設定をリセット */
+    font-variant-ligatures: none !important;
+    font-feature-settings: "palt" 0 !important;
+    -webkit-font-smoothing: subpixel-antialiased; /* 文字を細くクッキリさせる */
+}
 
+/* 4. Prism.js等のタグが幅を広げないように固定 */
+pre code span {
+    font-family: inherit !important;
+    font-size: inherit !important;
+    letter-spacing: 0 !important;
+}
