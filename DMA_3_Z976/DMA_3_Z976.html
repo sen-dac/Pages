@@ -195,7 +195,7 @@ InsideX68000のサンプルコードを見ると、全てのサンプルで必�
 <br>
 
 <h3>CER (0xE84081) チャンネルエラーレジスタ (R)</h3>
-<img src="cer.png" alt="cer" style="max-width: 100%; height: margin: 0 auto;">
+<img src="CER.png" alt="cer" style="max-width: 100%; height: margin: 0 auto;">
 <pre>
 <b>bit:7～5 リザーブビット</b>
         常に0が読み出される。
@@ -253,7 +253,7 @@ Read onlyのためCERに設定値はありません。<br>
 <br>
 
 <h3>DCR (0xE84084) デバイスコントロールレジスタ (R/W)</h3>
-<img src="dcr.png" alt="dcr" style="max-width: 100%; height: margin: 0 auto;">
+<img src="DCR.png" alt="dcr" style="max-width: 100%; height: margin: 0 auto;">
 <pre>
 <b>bit:7～6 XRM エクスターナルリクエストモード</b>
         00：バースト転送モード
@@ -305,7 +305,7 @@ DCRの設定値は引数で選択できるようにします。<br>
 <br>
 
 <h3>OCR (0xE84085) オペレーションコントロールレジスタ (R/W)</h3>
-<img src="ocr.png" alt="ocr" style="max-width: 100%; height: margin: 0 auto;">
+<img src="OCR.png" alt="ocr" style="max-width: 100%; height: margin: 0 auto;">
 <pre>
 <b>bit:7 DIR ディレクション</b>
         0：メモリ→デバイス/MAR → DAR
@@ -380,7 +380,7 @@ SIZE(オペランドサイズ)が'00'か'01'か'10'三択、REQG(チェイニン
 <br>
 
 <h3>SCR (0xE84086) シーケンスコントロールレジスタ (R/W)</h3>
-<img src="scr.png" alt="scr" style="max-width: 100%; height: margin: 0 auto;">
+<img src="SCR.png" alt="scr" style="max-width: 100%; height: margin: 0 auto;">
 <pre>
 <b>bit 7～4 リザーブビット</b>
         常に0を書き込む。
@@ -411,7 +411,7 @@ SIZE(オペランドサイズ)が'00'か'01'か'10'三択、REQG(チェイニン
 <br>
 
 <h3>CCR (0xE84087) チャンネルコントロールレジスタ (R/W)</h3>
-<img src="ccr.png" alt="ccr" style="max-width: 100%; height: margin: 0 auto;">
+<img src="CCR.png" alt="ccr" style="max-width: 100%; height: margin: 0 auto;">
 <pre>
 <b>bit:7 STR スタートオペレーション</b>
         1：動作スタート
@@ -462,7 +462,7 @@ SIZE(オペランドサイズ)が'00'か'01'か'10'三択、REQG(チェイニン
 <br>
 
 <h3>MTC (0xE8408A) メモリトランスファ・カウンタ (R/W)</h3>
-<img src="mtc.png" alt="mtc" style="max-width: 100%; height: margin: 0 auto;">
+<img src="MTC.png" alt="mtc" style="max-width: 100%; height: margin: 0 auto;">
 <br>
 <br>
 転送オペランド数を指定するレジスタです。<br>
@@ -475,7 +475,7 @@ OCRのSIZEビットの項でも書きましたが、オペランドとは転送1
 <br>
 
 <h3>MAR (0xE8408C) メモリアドレスレジスタ (R/W)</h3>
-<img src="mar.png" alt="mar" style="max-width: 100%; height: margin: 0 auto;">
+<img src="MAR.png" alt="mar" style="max-width: 100%; height: margin: 0 auto;">
 <br>
 <br>
 デュアルアドレスモード、シングルアドレスモード、どちらのモードでも使用するレジスタです。<br>
@@ -486,7 +486,7 @@ OCRのSIZEビットの項でも書きましたが、オペランドとは転送1
 <br>
 
 <h3>DAR (0xE84094) デバイスアドレスレジスタ (R/W)</h3>
-<img src="dar.png" alt="dar" style="max-width: 100%; height: margin: 0 auto;">
+<img src="DAR.png" alt="dar" style="max-width: 100%; height: margin: 0 auto;">
 <br>
 <br>
 デュアルアドレスモードでのみ使用するレジスタです。<br>
@@ -497,7 +497,7 @@ OCRのSIZEビットの項でも書きましたが、オペランドとは転送1
 <br>
 
 <h3>BTC (0xE8409A) ベーストランスファ・カウンタ (R/W)</h3>
-<img src="btc.png" alt="btc" style="max-width: 100%; height: margin: 0 auto;">
+<img src="BTC.png" alt="btc" style="max-width: 100%; height: margin: 0 auto;">
 <br>
 <br>
 複数ブロックの転送のうち、アレイチェインモードを使用する際に転送ブロック数を格納する所です。<br>
@@ -507,7 +507,7 @@ OCRのSIZEビットの項でも書きましたが、オペランドとは転送1
 <br>
 
 <h3>BAR (0xE8409C) ベースアドレスレジスタ (R/W)</h3>
-<img src="bar.png" alt="bar" style="max-width: 100%; height: margin: 0 auto;">
+<img src="BAR.png" alt="bar" style="max-width: 100%; height: margin: 0 auto;">
 <br>
 <br>
 複数ブロックの転送を行う際に必要な情報テーブルの先頭アドレスを設置する所です。<br>
@@ -519,7 +519,7 @@ OCRのSIZEビットの項でも書きましたが、オペランドとは転送1
 <br>
 
 <h3>NIV (0xE840A5) ノーマルインタラプトベクタ (R/W)</h3>
-<img src="niv.png" alt="niv" style="max-width: 100%; height: margin: 0 auto;">
+<img src="NIV.png" alt="niv" style="max-width: 100%; height: margin: 0 auto;">
 <br>
 <br>
 
@@ -535,7 +535,7 @@ OCRのSIZEビットの項でも書きましたが、オペランドとは転送1
 <br>
 
 <h3>EIV (0xE840A7) エラーインタラプトベクタ (R/W)EIV</h3>
-<img src="eiv.png" alt="eiv" style="max-width: 100%; height: margin: 0 auto;">
+<img src="EIV.png" alt="eiv" style="max-width: 100%; height: margin: 0 auto;">
 <br>
 <br>
 
@@ -551,7 +551,7 @@ OCRのSIZEビットの項でも書きましたが、オペランドとは転送1
 <br>
 
 <h3>MFC (0xE840A9) メモリファンクションコード (R/W)</h3>
-<img src="mfc.png" alt="mfc" style="max-width: 100%; height: margin: 0 auto;">
+<img src="MFC.png" alt="mfc" style="max-width: 100%; height: margin: 0 auto;">
 <pre>
 <b>bit 7～3 リザーブビット</b>
         常に0を書き込む。
@@ -580,7 +580,7 @@ InsideX68000のP.55にX68000では通常'101'スーパーバイザーデータ�
 <br>
 
 <h3>CPR (0xE840AD) チャンネルプライオリティレジスタ (R/W)</h3>
-<img src="cpr.png" alt="cpr" style="max-width: 100%; height: margin: 0 auto;">
+<img src="CPR.png" alt="cpr" style="max-width: 100%; height: margin: 0 auto;">
 <pre>
 <b>bit 7～2 リザーブビット</b>
         常に0を書き込む。
@@ -612,7 +612,7 @@ InsideX68000の全てのサンプルコードで'11'(最低)を設定してい�
 <br>
 
 <h3>DFC (0xE840B1) デバイスファンクションコード (R/W)</h3>
-<img src="dfc.png" alt="dfc" style="max-width: 100%; height: margin: 0 auto;">
+<img src="DFC.png" alt="dfc" style="max-width: 100%; height: margin: 0 auto;">
 <br>
 <br>
 MFC(メモリファンクションコード)と同じ感じの物です。<br>
@@ -623,7 +623,7 @@ MFCと同じ理由で'101'スーパーバイザーデータにします。<br>
 <br>
 
 <h3>BFC (0xE840B9) ベースファンクションコード (R/W)</h3>
-<img src="bfc.png" alt="bfc" style="max-width: 100%; height: margin: 0 auto;">
+<img src="BFC.png" alt="bfc" style="max-width: 100%; height: margin: 0 auto;">
 <br>
 <br>
 MFC(メモリファンクションコード)と同じ感じの物です。<br>
@@ -634,7 +634,7 @@ BARは複数ブロック転送を行う場合に使う物なので、今回の�
 <br>
 
 <h3>GCR (0xE840FF) ジェネラルコントロールレジスタ (R/W)</h3>
-<img src="gcr.png" alt="gcr" style="max-width: 100%; height: margin: 0 auto;">
+<img src="GCR.png" alt="gcr" style="max-width: 100%; height: margin: 0 auto;">
 <pre>
 <b>bit 7～4 リザーブビット</b>
         常に0を書き込む。
@@ -672,5 +672,4 @@ BARは複数ブロック転送を行う場合に使う物なので、今回の�
 <!-- (C)表記をしない方針とするものの、テキストの終端は明示する-->
 <div style="color: #00ff83;">[EOF]</div>
 </body>
-
 </html>
